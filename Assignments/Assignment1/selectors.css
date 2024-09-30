@@ -1,0 +1,39 @@
+h1{
+    color: green;
+}
+
+ul > li{
+    font-size: 18px;
+}
+
+#important{
+    color: red;
+}
+
+.skill{
+    color: blue;    
+}
+
+.skill li{
+    color: darkblue;
+}
+
+.education{
+    color: darkcyan;
+}
+
+.education li{
+    color: rgb(3, 97, 97);
+}
+
+.experience{
+    color: darkblue;
+}
+
+ul.sub-bullet-points > li{
+    font-size: 15px;
+}
+
+a[href]{
+    background-color: yellow;
+}

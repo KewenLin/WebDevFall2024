@@ -4,11 +4,98 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="selectors.css" />
+        <style>
+            .skill ul{
+                background-color: yellow;
+                height: 40px;
+                width: 500px;
+            }
+
+            .education ul{
+                background-color: greenyellow;
+                height: 50px;
+                width: 500px;
+                align-content: center;
+            }
+            
+            .experience ul{
+                background-color: rgb(158, 228, 228);
+            }
+
+            .sub-bullet-points ul{
+                background-color: aquamarine;
+                position: relative;
+                display: inline-block;
+            }
+
+            .name{
+                background-color: aliceblue;
+                position: fixed;
+                border: 10px solid black;
+                padding: 10px;
+            }
+
+            img {
+                float: left;
+                height: 400px;
+                width:400px;
+                border: 10px solid black;
+            }
+
+            body {
+                background-color: white;
+            }
+
+            @media (min-width: 150px) and (max-width: 500px) {
+                body {
+                    background-color: wheat;
+                }
+            }
+
+            @media (min-width: 501px) and (max-width: 700px) {
+                body {
+                    background-color: blanchedalmond;
+                }
+            }
+
+            .flex-container{
+                display: flex;
+                gap: 10px;
+                background-color: white;
+                flex-direction: row;
+                justify-content: center;
+                height: 500px;
+            }
+            .right{
+                background-color: orange;
+                align-self: center;
+                text-align: center;
+                width: 250px;
+            }
+            .left{
+                background-color: lightblue;
+                align-self: center;
+                text-align: center;
+                width: 250px;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 10px
+            }
+
+            .container>* {
+                background-color: antiquewhite;
+            }
+        </style>
     </head>
     <body>
-        <h1> Zoro </h1>
-            <img src ="Zoro Head.png" height="200"/>
-            <p>
+        <h1 class = "name"> Zoro </h1>
+            <img src ="Zoro Head.png"/>
+            <p id = "important">
                 Goal: The Greatest Swordsman
                 <br>
                 Current Bounty: 1,111,000,000 
@@ -16,15 +103,18 @@
 
         <hr/>
 
-        <h2> Skill </h2>
+        <h2 class = "skill"> Skill </h2>
+        <div class = "skill">
             <ul>
                 <li>
                     Three-sword Style
                 </li>
             </ul>
+        </div>
         <hr/>
 
-        <h2> Education </h2>
+        <h2 class = "education"> Education </h2>
+        <div class = "education">
             <ul>
                 <li>
                     Isshin Dojo - Swordmanship
@@ -33,9 +123,12 @@
                     Mihawk - Haki (Black Blade)
                 </li>
             </ul>
+        </div>
+            
         <hr/>
 
-        <h2> Experience </h2>
+        <h2 class = "experience"> Experience </h2>
+        <div class = "experience">
             <ul>
                 <li>
                     Isshin Dojo - Created Three-sword Style
@@ -47,33 +140,77 @@
                     Straw Hat Pirate Crew member
                 </li>
                 <br>
-                <b>
+                <div class = "sub-bullet-points">
+                    <b>
                     Fought aganist:
-                </b>
-                <ul>
-                    <li>
-                        Kaku: A member of CP9 with a giraffe-like Zoan Devil Fruit.
-                    </li>
-                    <li>
-                        Mr. 1: A Baroque Works agent with a Dice Dice Devil Fruit that turns his body into steel.
-                    </li>
-                    <li>
-                        Hatchan: A fish-man and member of Arlong's pirate crew.
-                    </li>
-                    <li>
-                        Ryuma: A legendary swordsman and zombie from Thriller Bark.
-                    </li>
-                    <li>
-                        Mihawk: The World's Greatest Swordsman(Defeated).
-                    </li>
-                </ul>
+                    </b>
+                    <ul>
+                        <li>
+                            Kaku: A member of CP9 with a giraffe-like Zoan Devil Fruit.
+                        </li>
+                        <li>
+                            Mr. 1: A Baroque Works agent with a Dice Dice Devil Fruit that turns his body into steel.
+                        </li>
+                        <li>
+                            Hatchan: A fish-man and member of Arlong's pirate crew.
+                        </li>
+                        <li>
+                            Ryuma: A legendary swordsman and zombie from Thriller Bark.
+                        </li>
+                        <li>
+                            Mihawk: The World's Greatest Swordsman(Defeated).
+                        </li>
+                    </ul>
+                </div>
             </ul>
-            
+        </div>
         <hr/>
 
         <h2> Other </h2>
         <a href="Public\ContactMe.html">ContactMe</a><br><br>
         <a href="Public\Hobbies.html">Hobbies</a><br><br>
+        
+        <hr/>
+        <h2> FlexBox </h2>
+        <div class = "flex-container">
+            <div class="left">
+                <p> Left </p> 
+            </div>
+    
+            <div class="right">
+                <p> Right </p> 
+            </div>
+        </div>
 
+        <hr/>
+        <h2> Grid </h2>
+        <div class="container">
+            <div>
+              <p>
+                Skill:
+                <br>
+                Three-sword Style
+              </p>
+            </div>
+            <div>
+              <p>
+                Education:
+                <br>
+                Isshin Dojo and Mihawk
+              </p>
+            </div>
+            <div>
+              <p>
+                Experience:
+                <br>
+                Straw Hat Pirate Crew member
+              </p>
+            </div>
+            <div>
+              <p>
+                Other
+              </p>
+            </div>
+          </div>
     </body>
 </html>
