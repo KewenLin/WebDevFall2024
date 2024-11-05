@@ -1,0 +1,68 @@
+/* Basic body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dceaf8;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgb(2, 132, 231);
+}
+
+/* Hero section styling */
+.hero {
+    background-color: rgb(178, 201, 244);
+    background-image: url('assets/bg.png');
+    background-size: cover;
+    padding: 100px 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Menu section styling */
+.menu {
+    padding: 60px 0;
+    /* background-color: rgb(173, 214, 230); */
+}
+
+.menu .col-md-4 {
+    background-color: #cfe1fb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Testimonials section styling */
+.testimonials blockquote {
+    background-color: lightcyan;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+/* Contact */
+.contact .form-group {
+    margin-bottom: 10px; 
+}
+
+.contact .form-control {
+    border: 1px solid #000000; 
+    border-radius: 0.3rem; 
+}
+
+.contact .btn {
+    width: 100%;
+}
+

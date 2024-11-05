@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSSStyling.css">
+</head>
+<body>
+
+    <!-- Navbar code HERE -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">MidFood</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    
+    <section id="home" class="hero text-center">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">MidFood</h1> <!-- Restaurant Name or Introduction -->
+                <p class="lead">Made for midterm</p> <!-- Short tagline or welcome message -->
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+                <!-- Menu Highlights Section -->
+                <section id="menu" class="menu">
+                    <div class="container">
+                        <h2>Menu Highlights</h2>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <img class="card-img-top mb-3" src="assets/pizza.png">
+                                        <h5 class="card-title">Pizza</h5> <!-- Dish 1 Name -->
+                                        <p class="card-text">Authentic, handcrafted pizzas made with the finest ingredients. Enjoy our delicious, crispy crusts topped with fresh sauces, quality cheeses, and a variety of toppings to satisfy every craving!</p> <!-- Dish 1 Description -->
+                                        <p><strong>Price:</strong> $3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <img class="card-img-top mb-3" src="assets/hamburger.png">
+                                        <h5 class="card-title">Hamburger</h5> <!-- Dish 2 Name -->
+                                        <p class="card-text">Our juicy, grilled patties are paired with freshly baked buns and topped with crisp lettuce, ripe tomatoes, and your choice of gourmet toppings.</p> <!-- Dish 2 Description -->
+                                        <p><strong>Price:</strong> $8</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <img class="card-img-top mb-3" src="assets/fries.png">
+                                        <h5 class="card-title">French Fries</h5> <!-- Dish 3 Name -->
+                                        <p class="card-text">Crispy, golden French fries are the perfect side to any meal! Hand-cut and cooked to perfection, they're seasoned just right for a satisfying crunch in every bite.</p> <!-- Dish 3 Description -->
+                                        <p><strong>Price:</strong> $5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+          </div>
+          <div class="col">
+                <!-- Customer Testimonials Section -->
+                <section id="testimonials" class="testimonials">
+                    <div class="container">
+                        <h2>What Our Customers Say</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <blockquote>
+                                    "I've been a regular at MidFood for months now, and every visit just gets better! Their hamburgers are incredibly juicy and packed with flavor, and the crispy French fries are the perfect complement. The staff is friendly and attentive, making each experience feel special. I highly recommend this place to anyone craving delicious comfort food!" <!-- Testimonial 1 -->
+                                    <footer>- Emily</footer> <!-- Customer 1 Name -->
+                                </blockquote>
+                            </div>
+                            <div class="col-md-4">
+                                <blockquote>
+                                    "I recently discovered MidFood, and it quickly became my favorite spot! The pizzas are amazing—loaded with fresh toppings and baked to perfection. Plus, their homemade garlic dipping sauce for the crust is a game changer! The atmosphere is cozy, and the service is top-notch. I can't wait to come back!" <!-- Testimonial 2 -->
+                                    <footer>- Jason</footer> <!-- Customer 2 Name -->
+                                </blockquote>
+                            </div>
+                            <div class="col-md-4">
+                                <blockquote>
+                                    "Every time I visit MidFood, I leave with a smile! Their signature burgers are hands down the best I've ever had, and the French fries are simply irresistible—crispy and flavorful! The staff is always friendly and welcoming. This place is a must-visit for anyone who loves great food!" <!-- Testimonial 3 -->
+                                    <footer>- Jake</footer> <!-- Customer 3 Name -->
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+          </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="date">Reservation Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Special Requests"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Include Bootstrap JS -->
+    <script src="______"></script>
+
+</body>
+</html>
