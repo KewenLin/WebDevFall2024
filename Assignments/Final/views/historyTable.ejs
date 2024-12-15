@@ -1,0 +1,39 @@
+<%- include('partials/navbar') %>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">Exchange History</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Base Currency</th>
+                                <th>Target Currency</th>
+                                <th>Amount</th>
+                                <th>Conversion Rate</th>
+                                <th>Converted Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% history.forEach(function(record) { %>
+                                <tr>
+                                    <td><%= record.base_currency %></td>
+                                    <td><%= record.target_currency %></td>
+                                    <td><%= record.amount %></td>
+                                    <td><%= record.conversion_rate %></td>
+                                    <td><%= record.converted_amount %></td>
+                                    <td><%= record.timestamp %></td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

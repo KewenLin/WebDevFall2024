@@ -1,0 +1,19 @@
+<%- include('partials/navbar') %>
+<div class="container">
+    <h1 class="mt-5">Conversion Results</h1>
+    
+    <!-- Display the conversion results -->
+    <h3 class="mt-5">Base Currency: <%= baseCurrency %></h3>
+    <h4>Amount: <%= conversionAmount %> <%= baseCurrency %></h4>
+
+    <h3 class="mt-5">Highest Value Currency</h3>
+    <p>Currency: <%= highestCurrency %></p>
+    <p>Conversion Rate: <%= highestValue %></p>
+    <p>Converted Amount: <%= highestConvertedAmount %> <%= highestCurrency %></p>
+
+    <h3 class="mt-5">Lowest Value Currency</h3>
+    <p>Currency: <%= lowestCurrency %></p>
+    <p>Conversion Rate: <%= lowestValue %></p>
+    <p>Converted Amount: <%= lowestConvertedAmount %> <%= lowestCurrency %></p>
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,32 @@
+<%- include('partials/navbar') %>
+<div class="container">
+    <h1 class="mt-5">Convert to Highest & Lowest Value Currencies</h1>
+    
+    <!-- Form to select base currency and amount -->
+    <form action="/convertHighLowResult" method="get" class="mt-4">
+        <div class="form-group">
+            <label for="base">Base Currency</label>
+            <select name="base" id="base" class="form-control" required>
+              <option value="USD">USD (US Dollar)</option>
+              <option value="EUR">EUR (Euro)</option>
+              <option value="GBP">GBP (British Pound)</option>
+              <option value="INR">INR (Indian Rupee)</option>
+              <option value="AUD">AUD (Australian Dollar)</option>
+              <option value="CAD">CAD (Canadian Dollar)</option>
+              <option value="JPY">JPY (Japanese Yen)</option>
+              <option value="CHF">CHF (Swiss Franc)</option>
+              <option value="CNY">CNY (Chinese Yuan)</option>
+              <option value="MXN">MXN (Mexican Peso)</option>
+              <option value="BRL">BRL (Brazilian Real)</option>
+              <option value="ZAR">ZAR (South African Rand)</option>
+              <option value="HKD">HKD (Hong Kong Dollar)</option>
+            </select>
+          </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter amount to convert" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Convert</button>
+    </form>
+</div>
+<%- include('partials/footer') %>

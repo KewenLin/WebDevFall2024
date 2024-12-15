@@ -1,4 +1,4 @@
-<%- include('partials/header') %>
+<%- include('partials/navbar') %>
   <div class="container mt-5">
     <h1>Currency Exchange</h1>
 
@@ -51,32 +51,6 @@
               </div>
               
               <button type="submit" class="btn btn-primary">Convert</button>
-
-              <h2>Exchange History</h2>
-              <table border="2">
-                  <thead>
-                      <tr>
-                          <th>Base Currency</th>
-                          <th>Target Currency</th>
-                          <th>Amount</th>
-                          <th>Conversion Rate</th>
-                          <th>Converted Amount</th>
-                          <th>Date</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <% history.forEach(function(record) { %>
-                          <tr>
-                              <td><%= record.base_currency %></td>
-                              <td><%= record.target_currency %></td>
-                              <td><%= record.amount %></td>
-                              <td><%= record.conversion_rate %></td>
-                              <td><%= record.converted_amount %></td>
-                              <td><%= record.timestamp %></td>
-                          </tr>
-                      <% }); %>
-                  </tbody>
-              </table>
             </form>
             <!-- Log Out Button -->
             <form action="/logout" method="get">
@@ -88,4 +62,4 @@
     </div>
   </div>
 
-  <%- include('partials/header') %>
+<%- include('partials/footer') %>

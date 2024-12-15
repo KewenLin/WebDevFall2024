@@ -3,6 +3,6 @@
 ## Features
 - User registration and login.
 - Currency conversion using Frankfurter API.
-- Save frequently used conversions.
+- Save conversions.
 
 #Run by command npm run dev
