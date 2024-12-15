@@ -1,0 +1,54 @@
+<%- include('partials/header') %>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Conversion Result</h3>
+                    <p>User: <%= userEmail %></p>
+                    <p>Base Currency: <%= conversionResult.base %></p>
+                    <p>Target Currency: <%= conversionResult.target %></p>
+                    <p>Amount: <%= conversionResult.amount %></p>
+                    <p>Conversion Rate: <%= conversionResult.conversionRate %></p>
+                    <p>Converted Amount: <%= conversionResult.convertedAmount %></p>
+
+
+                    <h2>Exchange History</h2>
+                    <table border="2">
+                        <thead>
+                            <tr>
+                                <th> Base Currency </th>
+                                <th>Target Currency</th>
+                                <th>Amount</th>
+                                <th>Conversion Rate</th>
+                                <th>Converted Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% history.forEach(function(record) { %>
+                                <tr>
+                                    <td><%= record.base_currency %></td>
+                                    <td><%= record.target_currency %></td>
+                                    <td><%= record.amount %></td>
+                                    <td><%= record.conversion_rate %></td>
+                                    <td><%= record.converted_amount %></td>
+                                    <td><%= record.timestamp %></td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+
+                    <!-- Exchange Page -->
+                    <form action="/exchange" method="get">
+                        <button type="submit" class="btn btn-primary">Back to Exchange</button>
+                    </form>
+
+                    <!-- Log Out Button -->
+                    <form action="/logout" method="get">
+                        <button type="submit" class="btn btn-primary">Log Out</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include('partials/header') %>

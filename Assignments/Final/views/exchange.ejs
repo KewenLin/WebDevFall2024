@@ -1,0 +1,91 @@
+<%- include('partials/header') %>
+  <div class="container mt-5">
+    <h1>Currency Exchange</h1>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <form action="/convert" method="get">
+              <div class="form-group">
+                <label for="base">Base Currency</label>
+                <select name="base" id="base" class="form-control" required>
+                  <option value="USD">USD (US Dollar)</option>
+                  <option value="EUR">EUR (Euro)</option>
+                  <option value="GBP">GBP (British Pound)</option>
+                  <option value="INR">INR (Indian Rupee)</option>
+                  <option value="AUD">AUD (Australian Dollar)</option>
+                  <option value="CAD">CAD (Canadian Dollar)</option>
+                  <option value="JPY">JPY (Japanese Yen)</option>
+                  <option value="CHF">CHF (Swiss Franc)</option>
+                  <option value="CNY">CNY (Chinese Yuan)</option>
+                  <option value="MXN">MXN (Mexican Peso)</option>
+                  <option value="BRL">BRL (Brazilian Real)</option>
+                  <option value="ZAR">ZAR (South African Rand)</option>
+                  <option value="HKD">HKD (Hong Kong Dollar)</option>
+                </select>
+              </div>
+            
+              <div class="form-group">
+                <label for="target">Target Currency</label>
+                <select name="target" id="target" class="form-control" required>
+                  <option value="EUR">EUR (Euro)</option>
+                  <option value="GBP">GBP (British Pound)</option>
+                  <option value="INR">INR (Indian Rupee)</option>
+                  <option value="AUD">AUD (Australian Dollar)</option>
+                  <option value="CAD">CAD (Canadian Dollar)</option>
+                  <option value="JPY">JPY (Japanese Yen)</option>
+                  <option value="CHF">CHF (Swiss Franc)</option>
+                  <option value="CNY">CNY (Chinese Yuan)</option>
+                  <option value="MXN">MXN (Mexican Peso)</option>
+                  <option value="BRL">BRL (Brazilian Real)</option>
+                  <option value="ZAR">ZAR (South African Rand)</option>
+                  <option value="HKD">HKD (Hong Kong Dollar)</option>
+                  <option value="USD">USD (US Dollar)</option>
+                </select>
+              </div>
+            
+              <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" id="amount" class="form-control" placeholder="Amount" required>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Convert</button>
+
+              <h2>Exchange History</h2>
+              <table border="2">
+                  <thead>
+                      <tr>
+                          <th>Base Currency</th>
+                          <th>Target Currency</th>
+                          <th>Amount</th>
+                          <th>Conversion Rate</th>
+                          <th>Converted Amount</th>
+                          <th>Date</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% history.forEach(function(record) { %>
+                          <tr>
+                              <td><%= record.base_currency %></td>
+                              <td><%= record.target_currency %></td>
+                              <td><%= record.amount %></td>
+                              <td><%= record.conversion_rate %></td>
+                              <td><%= record.converted_amount %></td>
+                              <td><%= record.timestamp %></td>
+                          </tr>
+                      <% }); %>
+                  </tbody>
+              </table>
+            </form>
+            <!-- Log Out Button -->
+            <form action="/logout" method="get">
+              <button type="submit" class="btn btn-primary">Log Out</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/header') %>
